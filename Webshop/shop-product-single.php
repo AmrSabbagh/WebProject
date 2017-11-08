@@ -425,6 +425,22 @@
 								</div>
 							</div>
 						</div>
+                                            
+                                                <?php
+                                                    include "include/dbconfig.php";
+                                                    $product_id = $_GET['product_id'];
+                                                    if(!isset ($_GET['product_id'])){
+                                                        echo "product not found";
+                                                        exit();
+                                                    }
+                                                    $sql = "SELECT * FROM products WHERE id=".$product_id."";
+                                                    $result = $conn->query($sql);
+                                                    if($result->num_rows == 0){
+                                                        echo "product not found";
+                                                        exit();
+                                                    }
+                                                ?>
+                                            
 						<div class="col-sm-8">
 							<h1 class="product-title">Elegant Black Wool Coat</h1>
 							<p class="product-rating">
