@@ -396,6 +396,7 @@
 		</div>
 		<!-- END BREADCRUMBS -->
 		<!-- PAGE CONTENT -->
+                <?php include "include/dbconfig.php";?>
 		<div class="page-content product-single">
 			<div class="container">
 				<!-- SINGLE PRODUCT -->
@@ -427,7 +428,6 @@
 						</div>
                                             
                                                 <?php
-                                                    include "include/dbconfig.php";
                                                     $product_id = $_GET['product_id'];
                                                     if(!isset ($_GET['product_id'])){
                                                         echo "product not found";
