@@ -686,5 +686,4 @@
 	<script src="assets/js/bravana-shop.js"></script>
 
 </body>
-
 </html>
