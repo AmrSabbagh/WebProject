@@ -315,15 +315,15 @@
 							</div>
 							<!-- END DISPLAY CONTROLS -->
                                                         
-                                                        <?php
-                                                        include "include/dbconfig.php";
-                                                        //do more stuff here, like querying the db
-                                                        ?>
-                                                        
 							<!-- PRODUCT GRID -->
 							<ul class="list-inline row product-grid">
-                                                            
-                                                            <?php //while loop here (&close it!) ?>
+                                                            <?php
+                                                                include "include/dbconfig.php";
+                                                                $sql = "SELECT * FROM products";
+                                                                $result = $conn->query($sql);
+                                                                
+                                                                while ($row = $result->fetch_assoc()){
+                                                            ?>
 								<li class="col-md-4 col-sm-6">
 									<div class="product-item">
 										<a href="shop-product-single.html">
@@ -340,7 +340,8 @@
 										</div>
 									</div>
 								</li>
-                                                                <!-- close loop here-->
+                                                                
+                                                                <?php } ?>
 							</ul>
 							<!-- END PRODUCT GRID -->
 						</div>
