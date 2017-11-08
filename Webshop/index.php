@@ -314,8 +314,16 @@
 								</div>
 							</div>
 							<!-- END DISPLAY CONTROLS -->
+                                                        
+                                                        <?php
+                                                        include "include/dbconfig.php";
+                                                        //do more stuff here, like querying the db
+                                                        ?>
+                                                        
 							<!-- PRODUCT GRID -->
 							<ul class="list-inline row product-grid">
+                                                            
+                                                            <?php //while loop here (&close it!) ?>
 								<li class="col-md-4 col-sm-6">
 									<div class="product-item">
 										<a href="shop-product-single.html">
@@ -332,83 +340,7 @@
 										</div>
 									</div>
 								</li>
-								<li class="col-md-4 col-sm-6">
-									<div class="product-item">
-										<a href="shop-product-single.html">
-											<img src="assets/img/shop/products/product3.jpg" class="img-responsive" alt="Product Image">
-											<span class="label label-discount">50% OFF</span>
-										</a>
-										<div class="product-info">
-											<h3 class="title"><a href="shop-product-single.html">Casual Blazer</a></h3>
-											<p class="short-description">Objectively monetize web-enabled expertise whereas enabled growth successful strategies.</p>
-											<div class="bottom">
-												<span class="price-old"><s>$100</s></span> <span class="price">$50</span>
-												<a href="#" class="btn btn-primary btn-addtocart"><i class="fa fa-cart-plus"></i> Add to cart</a>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="col-md-4 col-sm-6">
-									<div class="product-item">
-										<a href="shop-product-single.html">
-											<img src="assets/img/shop/products/product4.jpg" class="img-responsive" alt="Product Image">
-										</a>
-										<div class="product-info">
-											<h3 class="title"><a href="shop-product-single.html">Wool Jacket</a></h3>
-											<p class="short-description">Objectively monetize web-enabled expertise whereas enabled growth successful strategies.</p>
-											<div class="bottom">
-												<span class="price">$34</span>
-												<a href="#" class="btn btn-primary btn-addtocart"><i class="fa fa-cart-plus"></i> Add to cart</a>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="col-md-4 col-sm-6">
-									<div class="product-item">
-										<a href="shop-product-single.html">
-											<img src="assets/img/shop/products/product6.jpg" class="img-responsive" alt="Product Image">
-											<span class="label label-discount">25% OFF</span>
-										</a>
-										<div class="product-info">
-											<h3 class="title"><a href="shop-product-single.html">Formal Men Suit</a></h3>
-											<p class="short-description">Objectively monetize web-enabled expertise whereas enabled growth successful strategies.</p>
-											<div class="bottom">
-												<span class="price-old"><s>$200</s></span> <span class="price">$150</span>
-												<a href="#" class="btn btn-primary btn-addtocart"><i class="fa fa-cart-plus"></i> Add to cart</a>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="col-md-4 col-sm-6">
-									<div class="product-item">
-										<a href="shop-product-single.html">
-											<img src="assets/img/shop/products/product7.jpg" class="img-responsive" alt="Product Image">
-										</a>
-										<div class="product-info">
-											<h3 class="title"><a href="shop-product-single.html">Men Adventure Outfit</a></h3>
-											<p class="short-description">Objectively monetize web-enabled expertise whereas enabled growth successful strategies.</p>
-											<div class="bottom">
-												<span class="price">$34</span>
-												<a href="#" class="btn btn-primary btn-addtocart"><i class="fa fa-cart-plus"></i> Add to cart</a>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="col-md-4 col-sm-6">
-									<div class="product-item">
-										<a href="shop-product-single.html">
-											<img src="assets/img/shop/products/product1.jpg" class="img-responsive" alt="Product Image">
-										</a>
-										<div class="product-info">
-											<h3 class="title"><a href="shop-product-single.html">Sweater</a></h3>
-											<p class="short-description">Objectively monetize web-enabled expertise whereas enabled growth successful strategies.</p>
-											<div class="bottom">
-												<span class="price">$34</span>
-												<a href="#" class="btn btn-primary btn-addtocart"><i class="fa fa-cart-plus"></i> Add to cart</a>
-											</div>
-										</div>
-									</div>
-								</li>
+                                                                <!-- close loop here-->
 							</ul>
 							<!-- END PRODUCT GRID -->
 						</div>
