@@ -1,4 +1,6 @@
-<?php session_start()?>
+<?php session_start();
+$_SESSION["number_of_items"]=0;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,9 +86,12 @@
 						</form>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="#">Contact Us</a></li>
-                                                        <?php if(isset($_SESSION["userLogin"]){ ?>
+                                                        <?php if(!isset($_SESSION["userLogin"])){ ?>
 							<li><a href="#">SIGN IN</a></li>
 							<li><a href="#" class="as-button"><span class="btn btn-primary">SIGN UP</span></a></li>
+                                                        <?php } else {?>
+                                                        <li><a href="#?DFA?SFAS?">SIGN OUT</a></li>
+                                                        INCOMPLETEf eljk#$
                                                         <?php }?>
 						</ul>
 					</div>

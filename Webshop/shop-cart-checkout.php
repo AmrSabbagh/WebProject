@@ -1,3 +1,11 @@
+<?php 
+include "dbconfig.php";
+session_start();
+$number_of_items = $_SESSION["number_of_items"];
+
+$sql = "select * from products";
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
