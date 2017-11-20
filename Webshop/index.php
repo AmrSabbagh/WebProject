@@ -368,6 +368,7 @@ $_SESSION["number_of_items"]=0;
 											<p class="short-description">Objectively monetize web-enabled expertise whereas enabled growth successful strategies.</p>
 											<div class="bottom">
 												<span class="price">$34</span>
+                                                                                                oeugrhiubhlfa // two different buttons in signed in/out
 												<a href="#" class="btn btn-primary btn-addtocart"><i class="fa fa-cart-plus"></i> Add to cart</a>
 											</div>
 										</div>
