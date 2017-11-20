@@ -90,8 +90,7 @@ $_SESSION["number_of_items"]=0;
 							<li><a href="#">SIGN IN</a></li>
 							<li><a href="#" class="as-button"><span class="btn btn-primary">SIGN UP</span></a></li>
                                                         <?php } else {?>
-                                                        <li><a href="#?DFA?SFAS?">SIGN OUT</a></li>
-                                                        INCOMPLETEf eljk#$
+                                                        <li><a href="signout.php">SIGN OUT</a></li>
                                                         <?php }?>
 						</ul>
 					</div>
