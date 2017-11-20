@@ -84,10 +84,10 @@
 						</form>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="#">Contact Us</a></li>
-                                                        <?php if(isset($_SESSION["userLogin"]) {
+                                                        <?php if(isset($_SESSION["userLogin"]){ ?>
 							<li><a href="#">SIGN IN</a></li>
 							<li><a href="#" class="as-button"><span class="btn btn-primary">SIGN UP</span></a></li>
-                                                        }?>
+                                                        <?php }?>
 						</ul>
 					</div>
 				</div>
