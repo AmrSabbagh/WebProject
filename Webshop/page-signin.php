@@ -1,3 +1,5 @@
+<?php session_start(); ?> 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -430,6 +432,30 @@
 						<button type="submit" class="btn btn-primary btn-lg center-block"><i class="fa fa-sign-in"></i> SIGN IN</button>
 					</form>
 				</div>
+                                
+                                <?php
+                                include "dbconfig.php";
+                                if(isset($_POST["username"]) && isset($_POST["password"])){
+                                    $username = $_POST["username"];
+                                    $password = $_POST["password"];
+                                    $sql = "select * from XXXXXXX where username='". $username."' and password = '".$password."'";
+                                    
+                                    $result = $conn->query($sql);
+                                    
+                                    if($result->num_rows == 1){
+                                        $row = $result->fetch_assoc();
+                                        echo "<p>Welcome ".$row["firstname"]."!</p>";
+                                        $_SESSION["userLogin"] = $row;
+                                        header('location: index.php');
+                                    } else {
+                                        echo '<p>Incorrect User/Pass.</p>';
+                                    }
+                                }
+                                ?>
+                                
+                                
+                                
+                                
 				<!-- END SIGN IN FORM -->
 			</div>
 		</div>

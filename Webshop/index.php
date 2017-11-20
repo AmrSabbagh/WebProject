@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,11 +28,37 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/bravana72.png">
 	<link rel="apple-touch-icon-precomposed" href="assets/ico/bravana57.png">
 	<link rel="shortcut icon" href="assets/ico/favicon.ico">
+        <script>
+            function DarkTheme(){
+                var button = document.getElementById("theme");
+                var divs = document.querySelectorAll("div, footer");
+                var text = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6, li, label, a");
+                if(button.innerHTML == "Dark Theme") {
+                    button.innerHTML = "White Theme";
+                    for(var i = 0; i < divs.length; i++){
+                        divs[i].style.backgroundColor = "black";
+                    }
+                    for(var i = 0; i < text.length; i++){
+                        text[i].style.color= "white";
+                    }
+                    
+                } else {
+                    button.innerHTML = "Dark Theme";
+                    for(var i = 0; i < divs.length; i++){
+                        divs[i].style.backgroundColor = "";
+                    }
+                    for(var i = 0; i < text.length; i++){
+                        text[i].style.color= "";
+                    }
+                }
+                
+            }
+        </script>
 </head>
 
 <body>
 	<!-- WRAPPER -->
-	<div id="wrapper">
+        <div id="wrapper">
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default ">
 			<!-- TOP BAR -->
@@ -57,14 +84,16 @@
 						</form>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="#">Contact Us</a></li>
+                                                        <?php if(isset($_SESSION["userLogin"]) {
 							<li><a href="#">SIGN IN</a></li>
 							<li><a href="#" class="as-button"><span class="btn btn-primary">SIGN UP</span></a></li>
+                                                        }?>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<!-- END TOP BAR -->
-			<div class="container">
+			<div class="container-fluid">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
 					<span class="sr-only">Toggle Navigation</span>
 					<i class="fa fa-bars"></i>
@@ -72,6 +101,7 @@
 				<a href="index.html" class="navbar-brand">
 					<img src="image/logo.png" alt="Logo">
 				</a>
+                            <button name="theme" id="theme" onclick="DarkTheme()">Dark Theme</button>
 				<ul class="nav navbar-nav secondary-navbar-nav">
 					<li class="dropdown dropdown-cart">
 						<a href="#" class="as-icon disabled dropdown-toggle" data-toggle="dropdown"><i class="icon icon_cart_alt"></i> <span class="cart-count">2</span></a>
@@ -119,7 +149,6 @@
 						</li>
 						<li class="dropdown ">
 							<a href="#">NEWS</a>
-							
 						</li>
 						<li class="dropdown">
 							<a href="#">CONTACT US</a>
@@ -318,7 +347,7 @@
 							<!-- PRODUCT GRID -->
 							<ul class="list-inline row product-grid">
                                                             <?php
-                                                                include "include/dbconfig.php";
+                                                                include "dbconfig.php";
                                                                 $sql = "SELECT * FROM products";
                                                                 $result = $conn->query($sql);
                                                                 
@@ -353,7 +382,7 @@
 		<!-- END PAGE CONTENT -->
 		<!-- FOOTER -->
 		<footer>
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-4">
 						<div class="row">
