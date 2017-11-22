@@ -12,7 +12,7 @@ if(isset($_SESSION["username"]) && !isset($_COOKIE["username"])){
 elseif (isset($_SESSION["username"]) && isset($_COOKIE["username"])){
     //if same user and same session
     if($_COOKIE["username"] == $_SESSION["username"]){
-        echo $_COOKIE["username"].", a returning user has signed in.<br>";
+        echo $_SESSION["username"].", a returning user has signed in.<br>";
         //increase time of cookie
         setcookie("username", $_SESSION["username"], time()+86400 *2);
     } 
