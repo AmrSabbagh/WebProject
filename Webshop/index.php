@@ -87,11 +87,31 @@ elseif (isset($_SESSION["username"]) && isset($_COOKIE["username"])){
                  * var list = document.getElemenetByTagName('div');
                  * 
                  * for(var i = 0; i < list.length; i++){
-                 * list[i].classList
+                 * list[i].classList.add('night_mode');
+                 * }
                  * }
                  * 
+                 * function dayMode(){
+                 * var list = document.getElemenetByTagName('div');
+                 * 
+                 * for(var i = 0; i < list.length; i++){
+                 * list[i].classList.remove('night_mode');
+                 * }
                  * }
                  * 
+                 * function changeMode(){
+                 * if(!night_mode)
+                 *  nightMode();
+                 *else
+                 *  dayMode();
+                 * }
+                 * 
+                 * css for the file:
+                 * 
+                 * .nightMode {
+                 * background: black;
+                 * color: white;
+                 * }
                  * 
                  */
                 
