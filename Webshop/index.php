@@ -18,18 +18,12 @@ elseif (isset($_SESSION["username"]) && isset($_COOKIE["username"])){
     } 
     //if different user on the same session --> reset
     else {
-        echo $_COOKIE["username"].", a different returning user has signed in.<br>";
+        echo $_SESSION["username"].", a different returning user has signed in.<br>";
         setcookie("username", $_SESSION["username"], time()+86400 *2);
         $_SESSION["number_of_items"]=0;
         $number_of_items=0;
     }
 }
-
-
-
-
-//Creating cookie
-setcookie ("product_".$_SESSION[$product_id], $_SESSION["shopping_cart"][$_GET[""]])
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +59,7 @@ setcookie ("product_".$_SESSION[$product_id], $_SESSION["shopping_cart"][$_GET["
                 var button = document.getElementById("theme");
                 var divs = document.querySelectorAll("div, footer");
                 var text = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6, li, label, a");
-                if(button.innerHTML == "Dark Theme") {
+                if(button.innerHTML === "Dark Theme") {
                     button.innerHTML = "White Theme";
                     for(var i = 0; i < divs.length; i++){
                         divs[i].style.backgroundColor = "black";
@@ -83,6 +77,23 @@ setcookie ("product_".$_SESSION[$product_id], $_SESSION["shopping_cart"][$_GET["
                         text[i].style.color= "";
                     }
                 }
+                
+                /*
+                 * Another approach to do Dark theme
+                 * 
+                 * night_mode = false;
+                 * 
+                 * function nigthMode(){
+                 * var list = document.getElemenetByTagName('div');
+                 * 
+                 * for(var i = 0; i < list.length; i++){
+                 * list[i].classList
+                 * }
+                 * 
+                 * }
+                 * 
+                 * 
+                 */
                 
             }
         </script>
