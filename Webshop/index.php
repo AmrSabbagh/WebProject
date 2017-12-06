@@ -113,9 +113,32 @@ elseif (isset($_SESSION["username"]) && isset($_COOKIE["username"])){
                  * color: white;
                  * }
                  * 
+                 * //or you can use "body.setAttribute('class','night_mode');
+                 * 
                  */
+                function getMaxPrice(){
+                    var listOfProducts = document.getElementById('product_list');
+                    var listPrice = listOfProducts.getElementsByClassName('price');
+                    var listName = listOfProducts.getElementsByClassName('product_name');
+                    
+                    var max = 0;
+                    var name = "";
+                    
+                    console.log("list length = " + listPrice.length);
+                    for (var i=0; i<listPrice.length;i++){
+                        var current_price = parseDouble(listPrice[i].innerHTML); //it will remove dollar sign
+                        if(current_price > max){
+                            max=current_price;
+                            name = listName[i].childNodes[0].nodeValue;
+                            console.log("Max is: " + max + ", name is: " + name);
+                        }
+                    }
+                }
                 
+                alert("max is: " + max + ", name is: " + name);
+                console.log("max is: " + max);
             }
+            
         </script>
 </head>
 
@@ -311,7 +334,7 @@ elseif (isset($_SESSION["username"]) && isset($_COOKIE["username"])){
 											<span class="label label-info">BEST SELLER</span>
 										</a>
 										<div class="product-info">
-											<h3 class="title"><a href="shop-product-single.html"><?php echo $row["name"]?></a></h3>
+                                                                                    <h3 class="title"><a href="shop-product-single.html" class="product_name"><?php echo $row["name"]?></a></h3>
 											<p class="short-description"><?php echo $row["description"]?></p>
 											<div class="bottom">
 												<span class="price">$<?php echo $row["price"]?></span>
